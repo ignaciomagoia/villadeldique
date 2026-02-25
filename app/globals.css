@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #0b6f8f;
+  --color-banner: #9ccdf0;
+  --color-page: #f3f6f8;
+  --color-footer: #d6e8f5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-page);
+  color: #0f172a;
+  font-family: var(--font-inter), Inter, "Segoe UI", sans-serif;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(11, 111, 143, 0.5);
+  outline-offset: 2px;
+}
