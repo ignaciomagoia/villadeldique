@@ -13,6 +13,7 @@ export type ServiceItem = {
   id: string;
   label: string;
   icon: "home" | "utensils" | "activity" | "info";
+  href: string;
 };
 
 export type TravelCard = {
@@ -20,6 +21,9 @@ export type TravelCard = {
   title: string;
   subtitle: string;
   gradient: string;
+  icon: "home" | "utensils" | "activity";
+  imageSrc?: string;
+  imageAlt?: string;
   href?: string;
 };
 
@@ -104,10 +108,10 @@ export const navigationItems: NavigationItem[] = [
 ];
 
 export const serviceItems: ServiceItem[] = [
-  { id: "alojamientos", label: "Alojamientos", icon: "home" },
-  { id: "gastronomia", label: "Gastronomía", icon: "utensils" },
-  { id: "actividades", label: "Actividades", icon: "activity" },
-  { id: "servicios", label: "Servicios", icon: "info" },
+  { id: "alojamientos", label: "Alojamientos", icon: "home", href: "/alojamientos" },
+  { id: "gastronomia", label: "Gastronomía", icon: "utensils", href: "/gastronomia" },
+  { id: "actividades", label: "Actividades", icon: "activity", href: "/actividades" },
+  { id: "servicios", label: "Servicios", icon: "info", href: "/mapa-de-servicios" },
 ];
 
 export const travelCards: TravelCard[] = [
@@ -116,6 +120,9 @@ export const travelCards: TravelCard[] = [
     title: "Alojamiento",
     subtitle: "Opciones para descansar cerca del lago.",
     gradient: "from-slate-300 via-slate-200 to-slate-100",
+    icon: "home",
+    imageSrc: "/alojamientolaspircas.webp",
+    imageAlt: "Ingreso de Las Pircas Cabanas",
     href: "/alojamientos",
   },
   {
@@ -123,6 +130,9 @@ export const travelCards: TravelCard[] = [
     title: "Gastronomía",
     subtitle: "Restaurantes y bares para disfrutar sabores locales.",
     gradient: "from-slate-400 via-slate-300 to-slate-200",
+    icon: "utensils",
+    imageSrc: "/tomassino-y-pancracia.jpg",
+    imageAlt: "Frente de Tomassino y Pancrasia",
     href: "/gastronomia",
   },
   {
@@ -130,82 +140,93 @@ export const travelCards: TravelCard[] = [
     title: "Actividades",
     subtitle: "Senderos, náuticas y propuestas recomendadas.",
     gradient: "from-slate-300 via-slate-200 to-slate-100",
+    icon: "activity",
+    imageSrc: "/actividadesnautica.jpg",
+    imageAlt: "Esqui nautico en el lago",
     href: "/actividades",
   },
 ];
 
 export const galleryItems: GalleryItem[] = [
   {
-    id: "foto-01",
-    label: "Foto 01",
-    sizeClass: "row-span-2",
+    id: "galeria-01",
+    label: "Galería 01",
+    sizeClass: "lg:col-span-2",
     gradientClass: "from-[#7bbce0] via-[#9fd0ea] to-[#c6e5f4]",
+    imageSrc: "/galeria01.jpg",
+    imageAlt: "Vista panorámica de Villa del Dique",
   },
   {
-    id: "foto-02",
-    label: "Foto 02",
-    sizeClass: "row-span-2",
+    id: "galeria-02",
+    label: "Galería 02",
+    sizeClass: "lg:col-span-2",
     gradientClass: "from-[#4d87b1] via-[#6ea6ce] to-[#a9cde5]",
+    imageSrc: "/galeria02.jpg",
+    imageAlt: "Paisaje del lago en Villa del Dique",
   },
   {
-    id: "foto-03",
-    label: "Foto 03",
-    sizeClass: "row-span-2",
+    id: "galeria-03",
+    label: "Galería 03",
+    sizeClass: "lg:col-span-2",
     gradientClass: "from-[#77acd0] via-[#9bc2de] to-[#c9dfef]",
+    imageSrc: "/galeria03.jpg",
+    imageAlt: "Orilla del lago y vegetación",
   },
   {
-    id: "foto-04",
-    label: "Foto 04",
-    sizeClass: "row-span-3",
+    id: "galeria-04",
+    label: "Galería 04",
+    sizeClass: "lg:col-span-2",
     gradientClass: "from-[#8cb6d8] via-[#bfd9ec] to-[#dcebf6]",
+    imageSrc: "/galeria4.webp",
+    imageAlt: "Vista elevada de la costa",
   },
   {
-    id: "foto-05",
-    label: "Foto 05",
-    sizeClass: "row-span-2",
+    id: "galeria-05",
+    label: "Galería 05",
+    sizeClass: "lg:col-span-2",
     gradientClass: "from-[#87bde3] via-[#9ed2ea] to-[#d2ebf6]",
+    imageSrc: "/galeria06.JPG",
+    imageAlt: "Atardecer sobre el agua",
   },
   {
-    id: "foto-06",
-    label: "Foto 06",
-    sizeClass: "row-span-2",
+    id: "galeria-06",
+    label: "Galería 06",
+    sizeClass: "lg:col-span-2",
     gradientClass: "from-[#d7b684] via-[#edd5ae] to-[#f5e8cd]",
+    imageSrc: "/galeria7.jpg",
+    imageAlt: "Caminos y entorno natural",
   },
   {
-    id: "foto-07",
-    label: "Foto 07",
-    sizeClass: "row-span-1",
+    id: "galeria-07",
+    label: "Galería 07",
+    sizeClass: "lg:col-span-2",
     gradientClass: "from-[#f4b45b] via-[#f7ca74] to-[#ffe2a3]",
+    imageSrc: "/galeria08.JPG",
+    imageAlt: "Vista del lago desde la costa",
   },
   {
-    id: "foto-08",
-    label: "Foto 08",
-    sizeClass: "row-span-1",
+    id: "galeria-08",
+    label: "Galería 08",
+    sizeClass: "lg:col-span-2",
     gradientClass: "from-[#9faec5] via-[#bcc8d8] to-[#d8e0ea]",
+    imageSrc: "/galeria10.jpg",
+    imageAlt: "Embalse y paisaje serrano",
   },
   {
-    id: "foto-09",
-    label: "Foto 09",
-    sizeClass: "row-span-1",
+    id: "galeria-09",
+    label: "Galería 09",
+    sizeClass: "lg:col-span-1",
     gradientClass: "from-[#8eb2ce] via-[#acc6dc] to-[#d5e3ef]",
+    imageSrc: "/galeria11.jpeg",
+    imageAlt: "Panorámica del lago al atardecer",
   },
   {
-    id: "foto-10",
-    label: "Foto 10",
-    sizeClass: "row-span-2",
+    id: "galeria-10",
+    label: "Galería 10",
+    sizeClass: "lg:col-span-1",
     gradientClass: "from-[#7aa9c8] via-[#9bc5de] to-[#c6e1ef]",
-  },
-  {
-    id: "foto-11",
-    label: "Foto 11",
-    sizeClass: "row-span-1",
-    gradientClass: "from-[#8cb8d5] via-[#a7cde4] to-[#d0e6f3]",
-  },
-  {
-    id: "foto-12",
-    label: "Foto 12",
-    sizeClass: "row-span-2",
-    gradientClass: "from-[#5f96bc] via-[#84b8d8] to-[#b7d9ec]",
+    imageSrc: "/galriaquefalta.jpg",
+    imageAlt: "Ciclistas en actividad al aire libre",
   },
 ];
 
@@ -217,6 +238,8 @@ export const accommodationItems: AccommodationItem[] = [
     address: "Av. de los Pescadores 800",
     phone: "0358 487-4033",
     gradientClass: "from-[#9bb8c3] via-[#bcd1da] to-[#dce9ee]",
+    imageSrc: "/alojamientolaspircas.webp",
+    imageAlt: "Ingreso a Las Pircas Cabañas",
   },
   {
     id: "foxes",
@@ -225,6 +248,8 @@ export const accommodationItems: AccommodationItem[] = [
     address: "Av. de los Navegantes 500",
     phone: "03546 43-0333",
     gradientClass: "from-[#8eaac2] via-[#aec6d8] to-[#d4e4ef]",
+    imageSrc: "/alojamientofoxes.webp",
+    imageAlt: "Complejo Foxes Cabañas",
   },
   {
     id: "amerian",
@@ -233,6 +258,8 @@ export const accommodationItems: AccommodationItem[] = [
     address: "Av. de los Navegantes 663",
     phone: "03546 50-6285",
     gradientClass: "from-[#9aa8bf] via-[#b9c8da] to-[#d6e2ef]",
+    imageSrc: "/alojamientoamerian.webp",
+    imageAlt: "Hotel Amerian en Villa del Dique",
   },
 ];
 
@@ -244,6 +271,8 @@ export const gastronomyItems: GastronomyItem[] = [
     address: "Av. de los Pescadores 302",
     phone: "03546 40-5413",
     gradientClass: "from-[#9aa9bb] via-[#b9c8d7] to-[#d6e1ea]",
+    imageSrc: "/tomassino-y-pancracia.jpg",
+    imageAlt: "Tomassino y Pancrasia en Villa del Dique",
   },
   {
     id: "iowa",
@@ -252,6 +281,8 @@ export const gastronomyItems: GastronomyItem[] = [
     address: "Av. San Martín 202",
     phone: "0351 208-2818",
     gradientClass: "from-[#93a4ae] via-[#b8cad5] to-[#d9e4ea]",
+    imageSrc: "/gastronomiaiowa.jpg",
+    imageAlt: "Restaurante Iowa",
   },
   {
     id: "roda",
@@ -260,6 +291,8 @@ export const gastronomyItems: GastronomyItem[] = [
     address: "Av. Illia 187",
     phone: "03546 15-40-6684",
     gradientClass: "from-[#c4bcab] via-[#ddd4c3] to-[#ede6d9]",
+    imageSrc: "/gastronomiaroda.webp",
+    imageAlt: "Rodá pastelería artesanal",
   },
 ];
 
@@ -273,11 +306,15 @@ export const activityItems: ActivityItem[] = [
     id: "nauticas",
     title: "NÁUTICAS",
     gradientClass: "from-[#8cb4d0] via-[#9ec2db] to-[#c4d9ea]",
+    imageSrc: "/actividadesnautica.jpg",
+    imageAlt: "Actividad náutica en el lago",
   },
   {
     id: "recomendadas",
     title: "RECOMENDADAS",
     gradientClass: "from-[#8ca0be] via-[#aab9d1] to-[#c8d3e5]",
+    imageSrc: "/actividadesrecomendadas.jpg",
+    imageAlt: "Actividad recomendada en Villa del Dique",
   },
 ];
 

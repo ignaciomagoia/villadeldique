@@ -24,6 +24,7 @@ export function ActivitiesSection() {
                   src={item.imageSrc}
                   alt={item.imageAlt ?? item.title}
                   fill
+                  unoptimized
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
