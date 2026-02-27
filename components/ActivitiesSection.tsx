@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { activityItems } from "@/data/site-content";
 
@@ -13,38 +14,52 @@ export function ActivitiesSection() {
       </p>
 
       <div className="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {activityItems.map((item) => (
-          <article
-            key={item.id}
-            className="overflow-hidden rounded-3xl border border-slate-300 bg-white"
-          >
-            <div className="relative h-72 w-full overflow-hidden bg-slate-300">
-              {item.imageSrc ? (
-                <Image
-                  src={item.imageSrc}
-                  alt={item.imageAlt ?? item.title}
-                  fill
-                  unoptimized
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              ) : (
-                <>
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${item.gradientClass}`}
+        {activityItems.map((item) => {
+          const card = (
+            <article
+              className="overflow-hidden rounded-3xl border border-slate-300 bg-white"
+            >
+              <div className="relative h-72 w-full overflow-hidden bg-slate-300">
+                {item.imageSrc ? (
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.imageAlt ?? item.title}
+                    fill
+                    unoptimized
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_14%,rgba(255,255,255,0.58),transparent_38%)]" />
-                </>
-              )}
-            </div>
+                ) : (
+                  <>
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${item.gradientClass}`}
+                    />
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_14%,rgba(255,255,255,0.58),transparent_38%)]" />
+                  </>
+                )}
+              </div>
 
-            <div className="bg-[#c4d9e7] px-5 py-5">
-              <h2 className="break-words text-4xl font-semibold leading-tight text-[var(--color-primary)]">
-                {item.title}
-              </h2>
-            </div>
-          </article>
-        ))}
+              <div className="bg-[#c4d9e7] px-5 py-5">
+                <h2 className="break-words text-4xl font-semibold leading-tight text-[var(--color-primary)]">
+                  {item.title}
+                </h2>
+              </div>
+            </article>
+          );
+
+          return item.href ? (
+            <Link
+              key={item.id}
+              href={item.href}
+              aria-label={`Ver ${item.title.toLowerCase()}`}
+              className="group block transition-transform duration-200 hover:-translate-y-1 hover:scale-[1.01] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+            >
+              {card}
+            </Link>
+          ) : (
+            <div key={item.id}>{card}</div>
+          );
+        })}
       </div>
     </section>
   );

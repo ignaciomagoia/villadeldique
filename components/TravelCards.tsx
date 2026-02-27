@@ -1,4 +1,5 @@
 import {
+  ArrowUpRight,
   House,
   SunMedium,
   type LucideIcon,
@@ -46,8 +47,21 @@ export function TravelCards() {
                 </div>
               )}
 
-              <div className="absolute inset-0 bg-slate-900/0 transition-colors duration-300 group-hover:bg-slate-900/38 group-focus-visible:bg-slate-900/38" />
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+              <div className="pointer-events-none absolute inset-0 bg-slate-900/14 md:hidden" />
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center md:hidden">
+                <Icon
+                  aria-hidden="true"
+                  className="h-14 w-14 text-white/90 drop-shadow-[0_6px_12px_rgba(0,0,0,0.45)]"
+                  strokeWidth={1.7}
+                />
+              </div>
+              <div className="pointer-events-none absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--color-primary)] md:hidden">
+                Toca para ver
+                <ArrowUpRight aria-hidden="true" className="h-3.5 w-3.5" />
+              </div>
+
+              <div className="absolute inset-0 hidden bg-slate-900/0 transition-colors duration-300 group-hover:bg-slate-900/38 group-focus-visible:bg-slate-900/38 md:block" />
+              <div className="pointer-events-none absolute inset-0 hidden items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 md:flex">
                 <Icon
                   aria-hidden="true"
                   className="h-20 w-20 text-white drop-shadow-[0_6px_12px_rgba(0,0,0,0.45)]"

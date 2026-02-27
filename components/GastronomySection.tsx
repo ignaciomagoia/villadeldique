@@ -39,13 +39,13 @@ export function GastronomySection() {
             </div>
 
             <div className="bg-[#c4d9e7] px-4 pb-4 pt-3">
-              <h2 className="text-[2rem] font-semibold leading-none text-slate-900">
+              <h2 className="text-[1.75rem] font-semibold leading-[1.05] text-slate-900 sm:text-[1.95rem]">
                 {item.name}
               </h2>
-              <p className="mt-1 text-[2rem] font-semibold leading-none text-[var(--color-primary)]">
+              <p className="mt-1 text-[1.75rem] font-semibold leading-[1.05] text-[var(--color-primary)] sm:text-[1.95rem]">
                 {item.kind}
               </p>
-              <p className="mt-3 text-lg leading-snug text-slate-600">
+              <p className="mt-3 text-base leading-snug text-slate-600 sm:text-lg">
                 {item.address} -{" "}
                 <a
                   href={`tel:${item.phone.replace(/\s/g, "").replace("-", "")}`}

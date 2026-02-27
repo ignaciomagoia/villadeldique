@@ -54,7 +54,35 @@ export type ActivityItem = {
   title: string;
   imageSrc?: string;
   imageAlt?: string;
+  href?: string;
   gradientClass: string;
+};
+
+export type TrailItem = {
+  id: string;
+  title: string;
+  difficulty: string;
+  detail: string;
+  imageSrc: string;
+  imageAlt: string;
+};
+
+export type NauticActivityItem = {
+  id: string;
+  title: string;
+  subtitle: string;
+  detail: string;
+  imageSrc: string;
+  imageAlt: string;
+};
+
+export type RecommendedExperienceItem = {
+  id: string;
+  title: string;
+  subtitle: string;
+  detail: string;
+  imageSrc?: string;
+  imageAlt?: string;
 };
 
 export type GalleryItem = {
@@ -301,6 +329,9 @@ export const activityItems: ActivityItem[] = [
     id: "senderos",
     title: "SENDEROS",
     gradientClass: "from-[#8797a7] via-[#a4b4c4] to-[#c3d0de]",
+    imageSrc: "/sendero3.jpeg",
+    imageAlt: "Ruta de sendero en Villa del Dique",
+    href: "/senderos",
   },
   {
     id: "nauticas",
@@ -308,6 +339,7 @@ export const activityItems: ActivityItem[] = [
     gradientClass: "from-[#8cb4d0] via-[#9ec2db] to-[#c4d9ea]",
     imageSrc: "/actividadesnautica.jpg",
     imageAlt: "Actividad náutica en el lago",
+    href: "/actividades-nauticas",
   },
   {
     id: "recomendadas",
@@ -315,6 +347,88 @@ export const activityItems: ActivityItem[] = [
     gradientClass: "from-[#8ca0be] via-[#aab9d1] to-[#c8d3e5]",
     imageSrc: "/actividadesrecomendadas.jpg",
     imageAlt: "Actividad recomendada en Villa del Dique",
+    href: "/experiencias-recomendadas",
+  },
+];
+
+export const trailItems: TrailItem[] = [
+  {
+    id: "sendero-3",
+    title: "Subida al Cerro de las Antenas",
+    difficulty: "Dificultad: Moderada",
+    detail: "Distancia: 10 km - Tiempo: 2:30 hs",
+    imageSrc: "/sendero3.jpeg",
+    imageAlt: "Mapa del sendero Subida al Cerro de las Antenas",
+  },
+  {
+    id: "sendero-2",
+    title: "Hoteles abandonados de la Marina",
+    difficulty: "Dificultad: Fácil",
+    detail: "Distancia: 5 km - Tiempo: 1:15 hs",
+    imageSrc: "/sendero2.jpeg",
+    imageAlt: "Mapa del sendero Hoteles abandonados de la Marina",
+  },
+  {
+    id: "sendero-1",
+    title: "Playa Los Alemanes desde VdD",
+    difficulty: "Dificultad: Moderada",
+    detail: "Distancia: 29 km - Tiempo: 1:30 hs",
+    imageSrc: "/sendero1.jpeg",
+    imageAlt: "Mapa del sendero Playa Los Alemanes desde Villa del Dique",
+  },
+];
+
+export const nauticActivityItems: NauticActivityItem[] = [
+  {
+    id: "esqui-acuatico",
+    title: "Esquí acuático",
+    subtitle: "Clases",
+    detail: "Principiantes, medios y avanzados.",
+    imageSrc: "/actividadesnautica.jpg",
+    imageAlt: "Esqui acuatico en el lago de Villa del Dique",
+  },
+  {
+    id: "paddle-kayak",
+    title: "Paddleboard y kayak",
+    subtitle: "Alquiler",
+    detail: "Para todas las edades",
+    imageSrc: "/kayak.jpg",
+    imageAlt: "Actividad de paddleboard y kayak",
+  },
+  {
+    id: "kite-windsurf",
+    title: "Kiteboard y Windsurf",
+    subtitle: "Clases",
+    detail: "Principiantes, medios y avanzados.",
+    imageSrc: "/skate.jpg",
+    imageAlt: "Kiteboard y windsurf en el lago",
+  },
+];
+
+export const recommendedExperienceItems: RecommendedExperienceItem[] = [
+  {
+    id: "paseo-lancha",
+    title: "Paseo en lancha",
+    subtitle: "Desde embalse",
+    detail: "Para toda la familia",
+    imageSrc: "/actividadesrecomendadas.jpg",
+    imageAlt: "Paseo en lancha en el embalse",
+  },
+  {
+    id: "parque-acuatico",
+    title: "Primer parque acuatico en Cordoba",
+    subtitle: "Desde embalse",
+    detail: "Para toda la familia",
+    imageSrc: "/parqueacuatico.jpg",
+    imageAlt: "Parque acuatico en el lago",
+  },
+  {
+    id: "padel",
+    title: "Canchas de Padel",
+    subtitle: "Alquiler y clases",
+    detail: "Para toda la familia",
+    imageSrc: "/padel.jpeg",
+    imageAlt: "Canchas de padel",
   },
 ];
 

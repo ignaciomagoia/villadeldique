@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function HistorySection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
@@ -55,16 +57,16 @@ export function HistorySection() {
           </div>
         </article>
 
-        <div className="rounded-xl bg-white p-2 shadow-[0_18px_30px_-22px_rgba(15,23,42,0.6)]">
-          <div
-            role="img"
-            aria-label="Paisaje costero de Villa del Dique en formato placeholder"
-            className="relative h-[460px] overflow-hidden rounded-lg bg-[linear-gradient(180deg,#0f1910_0%,#1b2a1a_42%,#10170f_100%)] sm:h-[580px] lg:h-[760px]"
-          >
-            <div className="absolute inset-x-0 top-0 h-48 bg-[linear-gradient(180deg,rgba(191,222,248,0.95),rgba(191,222,248,0))]" />
-            <div className="absolute right-10 top-16 h-56 w-56 rounded-full bg-[#f6f8e4]/15 blur-2xl" />
-            <div className="absolute inset-x-0 top-1/2 h-20 -translate-y-1/2 bg-[#efe8bf]/30 blur-lg" />
-            <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-[linear-gradient(180deg,rgba(27,42,26,0),rgba(10,14,10,0.9))]" />
+        <div className="self-start overflow-hidden rounded-xl shadow-[0_18px_30px_-22px_rgba(15,23,42,0.6)]">
+          <div className="relative h-[460px] w-full overflow-hidden sm:h-[580px] lg:h-[760px]">
+            <Image
+              src="/historia.jpg"
+              alt="Paisaje costero de Villa del Dique"
+              fill
+              unoptimized
+              sizes="(max-width: 1024px) 100vw, 38vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </div>

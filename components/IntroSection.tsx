@@ -53,7 +53,7 @@ export function IntroSection() {
           </div>
         </div>
 
-        <p className="text-3xl leading-tight text-[var(--color-primary)] sm:text-4xl lg:text-[3rem]">
+        <p className="text-2xl leading-snug text-[var(--color-primary)] sm:text-4xl sm:leading-tight lg:text-[3rem]">
           <span className="font-bold">Villa del Dique</span> es un lugar que se
           muestra solo a quien se{" "}
           <span className="font-semibold italic">detiene a mirarlo</span>, a
