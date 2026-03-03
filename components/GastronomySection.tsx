@@ -8,9 +8,9 @@ export function GastronomySection() {
       <h1 className="text-5xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl">
         Gastronomía
       </h1>
-      <p className="mt-2 max-w-5xl text-xl leading-tight text-slate-900 sm:text-3xl">
-        Restaurantes, bares y cafés de Villa del Dique. Descubrí sabores
-        locales frente al lago o en el centro del pueblo.
+      <p className="mt-2 max-w-5xl text-lg leading-tight text-slate-900 sm:text-2xl">
+        Restaurantes, bares y cafés de Villa del Dique. Descubrí sabores locales
+        frente al lago o en el centro del pueblo.
       </p>
 
       <div className="mt-5 grid items-start gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -39,10 +39,10 @@ export function GastronomySection() {
             </div>
 
             <div className="bg-[#c4d9e7] px-4 pb-4 pt-3">
-              <h2 className="text-[1.75rem] font-semibold leading-[1.05] text-slate-900 sm:text-[1.95rem]">
+              <h2 className="text-[1.5rem] font-semibold leading-[1.05] text-slate-900 sm:text-[1.65rem]">
                 {item.name}
               </h2>
-              <p className="mt-1 text-[1.75rem] font-semibold leading-[1.05] text-[var(--color-primary)] sm:text-[1.95rem]">
+              <p className="mt-1 text-[1.5rem] font-semibold leading-[1.05] text-[var(--color-primary)] sm:text-[1.65rem]">
                 {item.kind}
               </p>
               <p className="mt-3 text-base leading-snug text-slate-600 sm:text-lg">

@@ -11,30 +11,30 @@ export function HowToGetSection() {
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
       <div className="grid gap-10 lg:grid-cols-[1.05fr_1fr] lg:items-start">
         <article className="space-y-8">
-          <h1 className="text-5xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl">
+          <h1 className="text-2xl font-extrabold leading-none text-[var(--color-primary)] sm:text-4xl">
             ¿Cómo llegar?
           </h1>
 
           <div className="space-y-2">
-            <h2 className="text-4xl font-bold leading-none text-[var(--color-primary)]">
+            <h2 className="text-2xl font-bold leading-none text-[var(--color-primary)] sm:text-3xl">
               En auto
             </h2>
-            <p className="max-w-2xl text-3xl leading-tight text-slate-900 sm:text-[2.1rem]">
+            <p className="max-w-2xl text-xl leading-tight text-slate-900 sm:text-[1.7rem]">
               Ingresás por las rutas RN 36 y RP 5, con señalización directa a Villa
               del Dique.
             </p>
           </div>
 
           <div className="space-y-3">
-            <h2 className="text-4xl font-bold leading-none text-[var(--color-primary)]">
+            <h2 className="text-2xl font-bold leading-none text-[var(--color-primary)] sm:text-3xl">
               En ómnibus
             </h2>
-            <ul className="list-disc pl-7 text-2xl leading-tight text-slate-900 sm:text-[1.9rem]">
+            <ul className="list-disc pl-7 text-lg leading-tight text-slate-900 sm:text-[1.5rem]">
               {busCompanies.map((company) => (
                 <li key={company}>{company}</li>
               ))}
             </ul>
-            <p className="max-w-2xl text-3xl leading-tight text-slate-900 sm:text-[2.1rem]">
+            <p className="max-w-2xl text-xl leading-tight text-slate-900 sm:text-[1.7rem]">
               Las empresas arriban a la Terminal de Ómnibus ubicada en pleno
               centro.
             </p>
@@ -45,13 +45,13 @@ export function HowToGetSection() {
               href="https://www.google.com/maps?q=Villa+del+Dique+Cordoba"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-14 min-w-72 items-center justify-center rounded-full bg-[var(--color-primary)] px-8 text-2xl font-medium text-white shadow-[0_12px_20px_-16px_rgba(9,40,57,0.85)] transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+              className="inline-flex h-14 min-w-72 items-center justify-center rounded-full bg-[var(--color-primary)] px-8 text-xl font-medium text-white shadow-[0_12px_20px_-16px_rgba(9,40,57,0.85)] transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
             >
               Abrir en Google Maps
             </Link>
             <Link
               href="#footer"
-              className="inline-flex h-14 min-w-72 items-center justify-center rounded-full bg-[#d7e8ee] px-8 text-2xl font-medium text-[var(--color-primary)] transition hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+              className="inline-flex h-14 min-w-72 items-center justify-center rounded-full bg-[#d7e8ee] px-8 text-xl font-medium text-[var(--color-primary)] transition hover:brightness-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
             >
               Oficina de Turismo
             </Link>

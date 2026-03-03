@@ -1,45 +1,46 @@
-import {
-  House,
-  Info,
-  type LucideIcon,
-  SunMedium,
-  UtensilsCrossed,
-} from "lucide-react";
 import Link from "next/link";
 
 import { serviceItems } from "@/data/site-content";
 
-const iconMap: Record<string, LucideIcon> = {
-  home: House,
-  utensils: UtensilsCrossed,
-  activity: SunMedium,
-  info: Info,
+const spriteBaseStyle = {
+  backgroundImage: "url('/iconitos.png')",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "899px 562px",
+} as const;
+
+const spritePositionByIcon: Record<string, string> = {
+  home: "-146px -265px",
+  utensils: "-305px -265px",
+  info: "-456px -265px",
+  activity: "-610px -265px",
 };
 
 export function IconSection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 py-12 md:px-8">
       <ul className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-        {serviceItems.map((item) => {
-          const Icon = iconMap[item.icon];
-
-          return (
-            <li key={item.id}>
-              <Link
-                href={item.href}
-                className="group flex flex-col items-center gap-3 text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
-                aria-label={`Ir a ${item.label}`}
-              >
-                <div className="flex h-24 w-24 items-center justify-center rounded-full bg-[var(--color-primary)] shadow-md transition-transform duration-200 group-hover:scale-105 sm:h-28 sm:w-28">
-                  <Icon className="h-10 w-10 text-white sm:h-12 sm:w-12" />
-                </div>
-                <p className="text-lg font-medium text-[var(--color-primary)] transition-colors duration-200 group-hover:text-[#085a73]">
-                  {item.label}
-                </p>
-              </Link>
-            </li>
-          );
-        })}
+        {serviceItems.map((item) => (
+          <li key={item.id}>
+            <Link
+              href={item.href}
+              className="group flex flex-col items-center gap-3 text-center focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
+              aria-label={`Ir a ${item.label}`}
+            >
+              <span
+                aria-hidden="true"
+                className="h-28 w-28 rounded-full shadow-[0_10px_18px_-14px_rgba(15,23,42,0.85)] transition-transform duration-200 group-hover:scale-105"
+                style={{
+                  ...spriteBaseStyle,
+                  backgroundPosition:
+                    spritePositionByIcon[item.icon] ?? spritePositionByIcon.home,
+                }}
+              />
+              <p className="text-lg font-medium text-[var(--color-primary)] transition-colors duration-200 group-hover:text-[#085a73]">
+                {item.label}
+              </p>
+            </Link>
+          </li>
+        ))}
       </ul>
     </section>
   );

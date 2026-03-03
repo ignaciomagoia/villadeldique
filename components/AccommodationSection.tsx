@@ -8,7 +8,7 @@ export function AccommodationSection() {
       <h1 className="text-5xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl">
         Alojamientos
       </h1>
-      <p className="mt-2 text-3xl text-slate-900 sm:text-4xl">
+      <p className="mt-2 text-2xl text-slate-900 sm:text-3xl">
         Hoteles, Cabañas o Campings.
       </p>
 
@@ -38,10 +38,10 @@ export function AccommodationSection() {
             </div>
 
             <div className="bg-[#c4d9e7] px-4 pb-4 pt-3">
-              <h2 className="text-[1.75rem] font-semibold leading-[1.05] text-slate-900 sm:text-[1.95rem]">
+              <h2 className="text-[1.5rem] font-semibold leading-[1.05] text-slate-900 sm:text-[1.65rem]">
                 {item.name}
               </h2>
-              <p className="mt-1 text-[1.75rem] font-semibold leading-[1.05] text-[var(--color-primary)] sm:text-[1.95rem]">
+              <p className="mt-1 text-[1.5rem] font-semibold leading-[1.05] text-[var(--color-primary)] sm:text-[1.65rem]">
                 {item.kind}
               </p>
               <p className="mt-3 text-base leading-snug text-slate-600 sm:text-lg">
