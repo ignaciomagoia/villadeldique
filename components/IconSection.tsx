@@ -17,7 +17,7 @@ const spritePositionByIcon: Record<string, string> = {
 
 export function IconSection() {
   return (
-    <section className="mx-auto w-full max-w-6xl px-4 py-12 md:px-8">
+    <section className="mx-auto w-full max-w-6xl px-4 pb-10 pt-1 md:px-8 md:py-12">
       <ul className="grid grid-cols-2 gap-8 sm:grid-cols-4">
         {serviceItems.map((item) => (
           <li key={item.id}>
@@ -35,7 +35,7 @@ export function IconSection() {
                     spritePositionByIcon[item.icon] ?? spritePositionByIcon.home,
                 }}
               />
-              <p className="text-lg font-medium text-[var(--color-primary)] transition-colors duration-200 group-hover:text-[#085a73]">
+              <p className="text-base font-medium text-[var(--color-primary)] transition-colors duration-200 group-hover:text-[#085a73] sm:text-lg">
                 {item.label}
               </p>
             </Link>

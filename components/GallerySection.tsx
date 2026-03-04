@@ -5,7 +5,7 @@ import { galleryItems } from "@/data/site-content";
 export function GallerySection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
-      <h1 className="mb-7 text-5xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl">
+      <h1 className="mb-7 text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
         Galería
       </h1>
 

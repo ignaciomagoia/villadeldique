@@ -32,7 +32,7 @@ export function IntroSection() {
   }, []);
 
   return (
-    <section id="intro" className="mx-auto w-full max-w-6xl px-4 pb-14 pt-16 md:px-8 md:pt-20">
+    <section id="intro" className="mx-auto w-full max-w-6xl px-4 pb-8 pt-14 md:px-8 md:pb-14 md:pt-20">
       <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
         <div className="rounded-3xl bg-white p-2 shadow-[0_14px_30px_-22px_rgba(15,23,42,0.6)]">
           <div className="relative h-72 w-full overflow-hidden rounded-[1.35rem] sm:h-[360px] lg:h-[420px]">
@@ -53,7 +53,7 @@ export function IntroSection() {
           </div>
         </div>
 
-        <p className="text-2xl leading-snug text-[var(--color-primary)] sm:text-4xl sm:leading-tight lg:text-[3rem]">
+        <p className="text-xl leading-snug text-[var(--color-primary)] sm:text-4xl sm:leading-tight lg:text-[2.55rem]">
           <span className="font-bold">Villa del Dique</span> es un lugar que se
           muestra solo a quien se{" "}
           <span className="font-semibold italic">detiene a mirarlo</span>, a

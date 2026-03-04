@@ -25,7 +25,7 @@ export function Navbar() {
           aria-label="Inicio"
           className="rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
-          <Logo className="h-12 w-[72px] md:h-14 md:w-[84px]" />
+          <Logo className="h-12 w-[72px] md:h-14 md:w-[84px] lg:h-[3.8rem] lg:w-[96px]" />
         </Link>
 
         <button

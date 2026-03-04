@@ -16,22 +16,22 @@ export function Banner() {
             />
           </div>
 
-          <div className="pointer-events-none absolute -left-32 top-1/2 z-20 hidden h-[33rem] w-[48rem] -translate-y-1/2 rotate-[168deg] md:block">
+          <div className="pointer-events-none absolute -bottom-12 -left-9 z-20 hidden h-[18rem] w-[26rem] -scale-x-100 rotate-[162deg] md:block lg:-bottom-[5rem] lg:-left-12 lg:h-[21rem] lg:w-[30rem] xl:-bottom-[5.5rem] xl:h-[23rem] xl:w-[33rem]">
             <Image
               src="/siluetaazul.png"
               alt=""
               fill
               unoptimized
-              sizes="(max-width: 768px) 320px, 560px"
+              sizes="(max-width: 768px) 320px, 480px"
               className="object-contain"
             />
           </div>
 
-          <div className="relative z-30 pl-32 sm:pl-40 md:pl-72">
-            <p className="text-4xl font-medium leading-none text-[var(--color-primary)] md:text-6xl">
+          <div className="relative z-30 pl-32 sm:pl-40 md:pl-60 md:pr-12 lg:pl-[22rem] lg:pr-14">
+            <p className="text-3xl font-medium leading-none text-[var(--color-primary)] md:text-6xl lg:text-5xl">
               Conocé
             </p>
-            <p className="text-5xl font-black leading-none text-[var(--color-primary)] md:text-8xl">
+            <p className="text-4xl font-black leading-none text-[var(--color-primary)] md:text-8xl lg:text-7xl">
               Villa del Dique
             </p>
           </div>

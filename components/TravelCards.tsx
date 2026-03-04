@@ -16,15 +16,29 @@ const iconMap: Record<string, LucideIcon> = {
   activity: SunMedium,
 };
 
+const mobileSpriteBaseStyle = {
+  backgroundImage: "url('/iconitos.png')",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "899px 562px",
+} as const;
+
+const mobileSpritePositionByIcon: Record<string, string> = {
+  home: "-146px -265px",
+  utensils: "-305px -265px",
+  activity: "-610px -265px",
+};
+
 export function TravelCards() {
   return (
-    <section id="planifica" className="mx-auto w-full max-w-6xl px-4 pb-24 md:px-8">
-      <h2 className="mb-8 text-5xl font-semibold text-[#7fb7df] sm:mb-12 sm:text-6xl">
+    <section id="planifica" className="mx-auto w-full max-w-6xl px-4 pb-20 md:px-8 md:pb-24">
+      <h2 className="mb-8 text-3xl font-semibold text-[#7fb7df] sm:mb-12 sm:text-6xl lg:text-5xl">
         Planificá tu viaje...
       </h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {travelCards.map((card) => {
           const Icon = iconMap[card.icon];
+          const spritePosition =
+            mobileSpritePositionByIcon[card.icon] ?? mobileSpritePositionByIcon.home;
 
           const cardContent = (
             <div className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl">
@@ -49,10 +63,13 @@ export function TravelCards() {
 
               <div className="pointer-events-none absolute inset-0 bg-slate-900/14 md:hidden" />
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center md:hidden">
-                <Icon
+                <span
                   aria-hidden="true"
-                  className="h-14 w-14 text-white/90 drop-shadow-[0_6px_12px_rgba(0,0,0,0.45)]"
-                  strokeWidth={1.7}
+                  className="h-28 w-28 scale-75 rounded-full shadow-[0_8px_14px_-10px_rgba(0,0,0,0.6)]"
+                  style={{
+                    ...mobileSpriteBaseStyle,
+                    backgroundPosition: spritePosition,
+                  }}
                 />
               </div>
               <div className="pointer-events-none absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--color-primary)] md:hidden">

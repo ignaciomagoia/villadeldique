@@ -5,7 +5,7 @@ import { recommendedExperienceItems } from "@/data/site-content";
 export function RecommendedExperiencesSection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
-      <h1 className="text-5xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl">
+      <h1 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
         Experiencias recomendadas
       </h1>
 
@@ -31,13 +31,13 @@ export function RecommendedExperiencesSection() {
             </div>
 
             <div className="bg-[#c4d9e7] px-4 pb-4 pt-3">
-              <h2 className="text-[1.9rem] font-semibold leading-[1.05] text-slate-900">
+              <h2 className="text-[1.55rem] font-semibold leading-[1.05] text-slate-900 lg:text-[1.55rem]">
                 {item.title}
               </h2>
-              <p className="mt-1 text-[1.9rem] font-semibold leading-[1.05] text-[var(--color-primary)]">
+              <p className="mt-1 text-[1.55rem] font-semibold leading-[1.05] text-[var(--color-primary)] lg:text-[1.55rem]">
                 {item.subtitle}
               </p>
-              <p className="mt-3 text-base leading-snug text-slate-600 sm:text-lg">
+              <p className="mt-3 text-base leading-snug text-slate-600 sm:text-lg lg:text-base">
                 {item.detail}
               </p>
             </div>

@@ -23,7 +23,7 @@ export function ContactSection() {
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
       <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr]">
         <article>
-          <h1 className="text-5xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl">
+          <h1 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
             Contactanos
           </h1>
 
@@ -115,10 +115,10 @@ export function ContactSection() {
 
         <aside className="space-y-7">
           <div>
-            <h2 className="text-5xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl">
+            <h2 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
               Oficina de turismo
             </h2>
-            <div className="mt-4 space-y-3 text-xl leading-tight text-slate-900 sm:text-[2.1rem]">
+            <div className="mt-4 space-y-3 text-lg leading-tight text-slate-900 sm:text-[2.1rem] lg:text-[1.8rem]">
               <p>Av. Carril de los Chilenos, X5862 Villa del Dique</p>
               <p>Tel: 03546528341</p>
               <p>Todos los días 8:30-20:00</p>
@@ -126,15 +126,15 @@ export function ContactSection() {
           </div>
 
           <div>
-            <h2 className="text-5xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl">
+            <h2 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
               Redes Sociales
             </h2>
             <ul className="mt-4 space-y-3">
-              <li className="flex items-center gap-3 text-xl text-slate-900 sm:text-[2.1rem]">
+              <li className="flex items-center gap-3 text-lg text-slate-900 sm:text-[2.1rem] lg:text-[1.8rem]">
                 <Instagram className="h-10 w-10 text-slate-800" />
                 <span>Villadeldique.cba</span>
               </li>
-              <li className="flex items-center gap-3 text-xl text-slate-900 sm:text-[2.1rem]">
+              <li className="flex items-center gap-3 text-lg text-slate-900 sm:text-[2.1rem] lg:text-[1.8rem]">
                 <Facebook className="h-10 w-10 text-slate-800" />
                 <span>Villa del Dique</span>
               </li>
