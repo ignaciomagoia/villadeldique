@@ -23,7 +23,7 @@ export function ContactSection() {
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
       <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr]">
         <article>
-          <h1 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
+          <h1 className="text-2xl font-extrabold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
             Contactanos
           </h1>
 
@@ -38,7 +38,7 @@ export function ContactSection() {
           >
             <div className="space-y-4">
               <div>
-                <label htmlFor="nombre" className="text-xl text-slate-700">
+                <label htmlFor="nombre" className="text-base text-slate-700">
                   Nombre
                 </label>
                 <input
@@ -47,12 +47,12 @@ export function ContactSection() {
                   type="text"
                   required
                   placeholder="Rellenar"
-                  className="mt-1 h-12 w-full rounded-lg border border-slate-300 bg-white px-3 text-lg text-slate-900 placeholder:text-slate-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+                  className="mt-1 h-12 w-full rounded-lg border border-slate-300 bg-white px-3 text-base text-slate-900 placeholder:text-slate-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
                 />
               </div>
 
               <div>
-                <label htmlFor="apellido" className="text-xl text-slate-700">
+                <label htmlFor="apellido" className="text-base text-slate-700">
                   Apellido
                 </label>
                 <input
@@ -61,12 +61,12 @@ export function ContactSection() {
                   type="text"
                   required
                   placeholder="Rellenar"
-                  className="mt-1 h-12 w-full rounded-lg border border-slate-300 bg-white px-3 text-lg text-slate-900 placeholder:text-slate-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+                  className="mt-1 h-12 w-full rounded-lg border border-slate-300 bg-white px-3 text-base text-slate-900 placeholder:text-slate-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="text-xl text-slate-700">
+                <label htmlFor="email" className="text-base text-slate-700">
                   Email
                 </label>
                 <input
@@ -75,12 +75,12 @@ export function ContactSection() {
                   type="email"
                   required
                   placeholder="Rellenar"
-                  className="mt-1 h-12 w-full rounded-lg border border-slate-300 bg-white px-3 text-lg text-slate-900 placeholder:text-slate-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+                  className="mt-1 h-12 w-full rounded-lg border border-slate-300 bg-white px-3 text-base text-slate-900 placeholder:text-slate-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
                 />
               </div>
 
               <div>
-                <label htmlFor="mensaje" className="text-xl text-slate-700">
+                <label htmlFor="mensaje" className="text-base text-slate-700">
                   Mensaje
                 </label>
                 <textarea
@@ -90,14 +90,14 @@ export function ContactSection() {
                   required
                   minLength={10}
                   placeholder="Rellenar"
-                  className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-lg text-slate-900 placeholder:text-slate-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+                  className="mt-1 w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-base text-slate-900 placeholder:text-slate-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
                 />
               </div>
             </div>
 
             <button
               type="submit"
-              className="mt-4 h-12 w-full rounded-lg bg-[var(--color-primary)] text-xl font-medium text-white transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+              className="mt-4 h-12 w-full rounded-lg bg-[var(--color-primary)] text-lg font-medium text-white transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
             >
               Enviar
             </button>
@@ -115,10 +115,10 @@ export function ContactSection() {
 
         <aside className="space-y-7">
           <div>
-            <h2 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
+            <h2 className="text-2xl font-extrabold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
               Oficina de turismo
             </h2>
-            <div className="mt-4 space-y-3 text-lg leading-tight text-slate-900 sm:text-[2.1rem] lg:text-[1.8rem]">
+            <div className="mt-4 space-y-3 text-base leading-tight text-slate-900 sm:text-[1.5rem] lg:text-[1.25rem]">
               <p>Av. Carril de los Chilenos, X5862 Villa del Dique</p>
               <p>Tel: 03546528341</p>
               <p>Todos los días 8:30-20:00</p>
@@ -126,15 +126,15 @@ export function ContactSection() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
+            <h2 className="text-2xl font-extrabold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
               Redes Sociales
             </h2>
             <ul className="mt-4 space-y-3">
-              <li className="flex items-center gap-3 text-lg text-slate-900 sm:text-[2.1rem] lg:text-[1.8rem]">
+              <li className="flex items-center gap-3 text-base text-slate-900 sm:text-[1.5rem] lg:text-[1.25rem]">
                 <Instagram className="h-10 w-10 text-slate-800" />
                 <span>Villadeldique.cba</span>
               </li>
-              <li className="flex items-center gap-3 text-lg text-slate-900 sm:text-[2.1rem] lg:text-[1.8rem]">
+              <li className="flex items-center gap-3 text-base text-slate-900 sm:text-[1.5rem] lg:text-[1.25rem]">
                 <Facebook className="h-10 w-10 text-slate-800" />
                 <span>Villa del Dique</span>
               </li>

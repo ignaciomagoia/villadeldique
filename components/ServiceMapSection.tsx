@@ -10,10 +10,10 @@ const legendItems = serviceCategories.filter((item) =>
 export function ServiceMapSection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
-      <h1 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
+      <h1 className="text-2xl font-extrabold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
         Mapa Integral
       </h1>
-      <p className="mt-2 max-w-4xl text-xl leading-tight text-slate-900 sm:text-3xl lg:text-2xl">
+      <p className="mt-2 max-w-4xl text-lg leading-tight text-slate-900 sm:text-xl lg:text-lg">
         Todo lo que tenes que saber para moverte y estar tranquilo.
         <br />
         Encontra nuestros servicios de transporte, salud, cajeros y combustible.

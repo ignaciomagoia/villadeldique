@@ -5,10 +5,10 @@ import { accommodationItems } from "@/data/site-content";
 export function AccommodationSection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
-      <h1 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
+      <h1 className="text-2xl font-extrabold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
         Alojamientos
       </h1>
-      <p className="mt-2 text-xl text-slate-900 sm:text-3xl lg:text-2xl">
+      <p className="mt-2 text-lg text-slate-900 sm:text-xl lg:text-lg">
         Hoteles, Cabañas o Campings.
       </p>
 
@@ -38,13 +38,13 @@ export function AccommodationSection() {
             </div>
 
             <div className="bg-[#c4d9e7] px-4 pb-4 pt-3">
-              <h2 className="text-[1.35rem] font-semibold leading-[1.05] text-slate-900 sm:text-[1.65rem] lg:text-[1.4rem]">
+              <h2 className="text-[1.2rem] font-semibold leading-[1.05] text-slate-900 sm:text-[1.35rem] lg:text-[1.1rem]">
                 {item.name}
               </h2>
-              <p className="mt-1 text-[1.35rem] font-semibold leading-[1.05] text-[var(--color-primary)] sm:text-[1.65rem] lg:text-[1.4rem]">
+              <p className="mt-1 text-[1.2rem] font-semibold leading-[1.05] text-[var(--color-primary)] sm:text-[1.35rem] lg:text-[1.1rem]">
                 {item.kind}
               </p>
-              <p className="mt-3 text-base leading-snug text-slate-600 sm:text-lg lg:text-base">
+              <p className="mt-3 text-sm leading-snug text-slate-600 sm:text-base lg:text-sm">
                 {item.address} -{" "}
                 <a
                   href={`tel:${item.phone.replace(/\s/g, "").replace("-", "")}`}

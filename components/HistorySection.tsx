@@ -5,11 +5,11 @@ export function HistorySection() {
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
       <div className="grid gap-8 lg:grid-cols-[1.32fr_1fr]">
         <article className="space-y-8">
-          <h1 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
+          <h1 className="text-2xl font-extrabold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
             Historia
           </h1>
 
-          <p className="text-lg leading-relaxed text-slate-800 sm:text-xl lg:text-lg">
+          <p className="text-base leading-relaxed text-slate-800 sm:text-lg lg:text-base">
             <span className="font-bold">Villa del Dique</span> nació en 1935, cuando{" "}
             <span className="font-bold">Mateo Osella y Enrique Marandino</span>{" "}
             imaginaron un poblado que{" "}
@@ -22,10 +22,10 @@ export function HistorySection() {
           </p>
 
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
+            <h2 className="text-xl font-bold leading-none text-[var(--color-primary)] sm:text-2xl lg:text-xl">
               Su Patrona, Nuestra Señora de Pompeya
             </h2>
-            <p className="text-lg leading-relaxed text-slate-800 sm:text-xl lg:text-lg">
+            <p className="text-base leading-relaxed text-slate-800 sm:text-lg lg:text-base">
               Se celebra el 11 de octubre y recuerda esa fe sencilla que sostiene a
               la comunidad. El primer gran impulso llegó con el{" "}
               <span className="font-bold">embalse de Río Tercero</span>: el agua
@@ -41,10 +41,10 @@ export function HistorySection() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
+            <h2 className="text-xl font-bold leading-none text-[var(--color-primary)] sm:text-2xl lg:text-xl">
               Crisis del 2001
             </h2>
-            <p className="text-lg leading-relaxed text-slate-800 sm:text-xl lg:text-lg">
+            <p className="text-base leading-relaxed text-slate-800 sm:text-lg lg:text-base">
               Nuevos proyectos volvieron a elegir estas orillas:{" "}
               <span className="font-bold">
                 cabañas, residencias de verano y barrios

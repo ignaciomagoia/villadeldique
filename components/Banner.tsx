@@ -28,10 +28,10 @@ export function Banner() {
           </div>
 
           <div className="relative z-30 pl-32 sm:pl-40 md:pl-60 md:pr-12 lg:pl-[22rem] lg:pr-14">
-            <p className="text-3xl font-medium leading-none text-[var(--color-primary)] md:text-6xl lg:text-5xl">
+            <p className="text-3xl font-medium leading-none text-[var(--color-primary)] md:text-6xl lg:text-4xl">
               Conocé
             </p>
-            <p className="text-4xl font-black leading-none text-[var(--color-primary)] md:text-8xl lg:text-7xl">
+            <p className="text-4xl font-black leading-none text-[var(--color-primary)] md:text-8xl lg:text-6xl">
               Villa del Dique
             </p>
           </div>

@@ -1,44 +1,24 @@
-import {
-  ArrowUpRight,
-  House,
-  SunMedium,
-  type LucideIcon,
-  UtensilsCrossed,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 import { travelCards } from "@/data/site-content";
 
-const iconMap: Record<string, LucideIcon> = {
-  home: House,
-  utensils: UtensilsCrossed,
-  activity: SunMedium,
-};
-
-const mobileSpriteBaseStyle = {
-  backgroundImage: "url('/iconitos.png')",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "899px 562px",
-} as const;
-
-const mobileSpritePositionByIcon: Record<string, string> = {
-  home: "-146px -265px",
-  utensils: "-305px -265px",
-  activity: "-610px -265px",
+const iconImageByType: Record<string, string> = {
+  home: "/iconitoalojamiento.png",
+  utensils: "/iconitogastronomia.png",
+  activity: "/iconitoactividades.png",
 };
 
 export function TravelCards() {
   return (
     <section id="planifica" className="mx-auto w-full max-w-6xl px-4 pb-20 md:px-8 md:pb-24">
-      <h2 className="mb-8 text-3xl font-semibold text-[#7fb7df] sm:mb-12 sm:text-6xl lg:text-5xl">
+      <h2 className="mb-8 text-3xl font-semibold text-[#7fb7df] sm:mb-12 sm:text-6xl lg:text-4xl">
         Planificá tu viaje...
       </h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {travelCards.map((card) => {
-          const Icon = iconMap[card.icon];
-          const spritePosition =
-            mobileSpritePositionByIcon[card.icon] ?? mobileSpritePositionByIcon.home;
+          const iconImage = iconImageByType[card.icon] ?? iconImageByType.home;
 
           const cardContent = (
             <div className="group relative block aspect-[4/3] w-full overflow-hidden rounded-3xl">
@@ -63,14 +43,16 @@ export function TravelCards() {
 
               <div className="pointer-events-none absolute inset-0 bg-slate-900/14 md:hidden" />
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center md:hidden">
-                <span
-                  aria-hidden="true"
-                  className="h-28 w-28 scale-75 rounded-full shadow-[0_8px_14px_-10px_rgba(0,0,0,0.6)]"
-                  style={{
-                    ...mobileSpriteBaseStyle,
-                    backgroundPosition: spritePosition,
-                  }}
-                />
+                <span aria-hidden="true" className="relative h-48 w-48">
+                  <Image
+                    src={iconImage}
+                    alt=""
+                    fill
+                    unoptimized
+                    sizes="192px"
+                    className="object-contain drop-shadow-[0_8px_14px_rgba(0,0,0,0.45)]"
+                  />
+                </span>
               </div>
               <div className="pointer-events-none absolute bottom-3 right-3 flex items-center gap-1 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-[var(--color-primary)] md:hidden">
                 Toca para ver
@@ -79,11 +61,16 @@ export function TravelCards() {
 
               <div className="absolute inset-0 hidden bg-slate-900/0 transition-colors duration-300 group-hover:bg-slate-900/38 group-focus-visible:bg-slate-900/38 md:block" />
               <div className="pointer-events-none absolute inset-0 hidden items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100 md:flex">
-                <Icon
-                  aria-hidden="true"
-                  className="h-20 w-20 text-white drop-shadow-[0_6px_12px_rgba(0,0,0,0.45)]"
-                  strokeWidth={1.7}
-                />
+                <span aria-hidden="true" className="relative h-44 w-44">
+                  <Image
+                    src={iconImage}
+                    alt=""
+                    fill
+                    unoptimized
+                    sizes="176px"
+                    className="object-contain drop-shadow-[0_8px_14px_rgba(0,0,0,0.45)]"
+                  />
+                </span>
               </div>
               <span className="sr-only">{card.title}</span>
             </div>

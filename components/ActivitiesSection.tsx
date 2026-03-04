@@ -6,10 +6,10 @@ import { activityItems } from "@/data/site-content";
 export function ActivitiesSection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
-      <h1 className="text-3xl font-extrabold leading-none text-[var(--color-primary)] sm:text-6xl lg:text-5xl">
+      <h1 className="text-2xl font-extrabold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
         Actividades
       </h1>
-      <p className="mt-2 max-w-4xl text-xl leading-tight text-slate-900 sm:text-3xl lg:text-2xl">
+      <p className="mt-2 max-w-4xl text-lg leading-tight text-slate-900 sm:text-xl lg:text-lg">
         Elegí tu plan: senderos, actividades náuticas o experiencias recomendadas.
       </p>
 
@@ -40,7 +40,7 @@ export function ActivitiesSection() {
               </div>
 
               <div className="bg-[#c4d9e7] px-5 py-5">
-                <h2 className="break-words text-3xl font-semibold leading-tight text-[var(--color-primary)] lg:text-3xl">
+                <h2 className="break-words text-2xl font-semibold leading-tight text-[var(--color-primary)] lg:text-xl">
                   {item.title}
                 </h2>
               </div>
