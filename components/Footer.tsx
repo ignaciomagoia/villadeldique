@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from "lucide-react";
+﻿import { Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 
 import { Logo } from "./Logo";
@@ -15,9 +15,9 @@ export function Footer() {
           <Logo className="h-12 w-[116px]" />
         </Link>
 
-        <div className="space-y-1 text-lg text-slate-800">
-          <p>Av. Carril de los Chilenos, X5862 Villa del Dique</p>
-          <p>Tel: 03546 52-8341 · Todos los días 8:30-20:00</p>
+        <div className="space-y-1 text-xs leading-tight text-slate-800 sm:text-sm md:text-lg">
+          <p className="whitespace-nowrap">Av. Carril de los Chilenos, X5862 Villa del Dique</p>
+          <p className="whitespace-nowrap">Tel: 03546 52-8341 · Todos los días 8:30-20:00</p>
         </div>
 
         <div className="flex items-center gap-3 md:justify-self-end">
@@ -40,3 +40,5 @@ export function Footer() {
     </footer>
   );
 }
+
+
