@@ -1,5 +1,4 @@
 import { Banner } from "@/components/Banner";
-import { CTAButton } from "@/components/CTAButton";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { IconSection } from "@/components/IconSection";
@@ -15,7 +14,6 @@ export default function Home() {
         <Hero />
         <IntroSection />
         <IconSection />
-        <CTAButton />
         <Banner />
         <TravelCards />
       </main>

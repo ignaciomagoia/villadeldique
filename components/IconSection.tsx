@@ -28,7 +28,7 @@ export function IconSection() {
             >
               <span
                 aria-hidden="true"
-                className="h-28 w-28 rounded-full shadow-[0_10px_18px_-14px_rgba(15,23,42,0.85)] transition-transform duration-200 group-hover:scale-105"
+                className="h-28 w-28 scale-[0.82] rounded-full shadow-[0_10px_18px_-14px_rgba(15,23,42,0.85)] transition-transform duration-200 group-hover:scale-[0.86] sm:scale-100 sm:group-hover:scale-105"
                 style={{
                   ...spriteBaseStyle,
                   backgroundPosition:

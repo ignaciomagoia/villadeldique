@@ -1,10 +1,19 @@
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { trailItems } from "@/data/site-content";
 
 export function TrailSection() {
   return (
     <section className="mx-auto w-full max-w-6xl px-4 pb-14 pt-10 md:px-8 md:pt-12">
+      <Link
+        href="/actividades"
+        className="mb-2 inline-flex items-center gap-1 rounded-md text-sm font-medium text-[var(--color-primary)] transition hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-primary)]"
+      >
+        <ArrowLeft aria-hidden="true" className="h-4 w-4" />
+        Volver
+      </Link>
       <h1 className="text-2xl font-extrabold leading-none text-[var(--color-primary)] sm:text-4xl lg:text-3xl">
         Senderos
       </h1>
